@@ -1,20 +1,13 @@
-print("Hello World!")
-
+name = 'Bro'
 age = 21
-print("You are "+str(age)+" years old")
-print(f"You are {age} years old")
-
-quantity = 32
-print("There are "+str(quantity)+" items available")
-
 gpa = 3.42
-print(f"My gpa is {gpa}")
+student = True
 
-distance = 60.58
-print(f"You run {distance} km")
+age = float(age)
+print(age)
 
-name = "Abu"
-print(f"My name is {name}")
+name = bool(name)
+print(name)
 
-online = True
-print(f"Are you online? {online}")
+gpa = int(gpa)
+print(gpa)
