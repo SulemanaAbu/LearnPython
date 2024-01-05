@@ -1,7 +1,8 @@
 # Exercise
 import math
 print("----------------------------")
-print("Circumference of a circle")
+print("Area of a circle")
 print("---------------------------")
-
-print(f"Circumference  = {2 * math.pi * float(input("Enter the radius of the circle: "))}")
+radius = float(input("Enter the radius: "))
+area = math.pi * pow(radius, 2)
+print(f"The area is {round(area, 3)}")
