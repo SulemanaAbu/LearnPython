@@ -1,6 +1,11 @@
-name = input("Enter your name: ")
-print(f"Your name is {name}")
+# Exercise
+adjective1 = input("Enter an adjective: ")
+adjective2 = input("Enter another adjective: ")
+noun = input("Enter a noun: ")
+adjective3 = input("Enter a third adjective: ")
+verb = input("Enter a verb: ")
 
-age = int(input("Enter your age: "))
-print(f"You are {age} years old")
-print(f"You will be {age+1} next year")
+print(f"Today I went to the {adjective1} zoo")
+print(f"In an exhibit,I saw a {noun}")
+print(f"{noun} was {adjective2} and {verb}ing")
+print(f"I was {adjective3}")
