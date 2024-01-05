@@ -1,13 +1,6 @@
-name = 'Bro'
-age = 21
-gpa = 3.42
-student = True
+name = input("Enter your name: ")
+print(f"Your name is {name}")
 
-age = float(age)
-print(age)
-
-name = bool(name)
-print(name)
-
-gpa = int(gpa)
-print(gpa)
+age = int(input("Enter your age: "))
+print(f"You are {age} years old")
+print()
