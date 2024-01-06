@@ -1,10 +1,12 @@
-# nested for loops
+import time
 
-rows = int(input("Enter the number of rows: "))
-columns = int(input("Enter the number of columns: "))
-symbol = input("Enter the symbol: ")
+myTime = int(input("Enter the time in secs: "))
 
-for y in range(rows):
-    for x in range(columns):
-        print(symbol, end="")
-    print()
+for x in range(myTime, -1, -1):
+    seconds = x % 60
+    minutes = int(x / 60) % 60
+    hours = int(x / 3600)
+    print(f"{hours:02}:{minutes:02}:{seconds:02}")
+    time.sleep(1)
+
+print("TIME's UP!!!")
