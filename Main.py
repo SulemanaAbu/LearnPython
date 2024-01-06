@@ -1,9 +1,20 @@
 # If and else statements
-age = int(input("Enter you age: "))
-if age >= 18:
-    print("You are an adult")
-elif age < 0:
-    print("You have not been born yet")
-else:
-    print("You are a child")
+print("Accepting scores from students and displaying grade obtained")
+print("____________________________________________________________")
 
+score = int(input("Enter score obtained: "))
+
+if score > 100:
+    print("Enter a valid Score!")
+elif score >= 80:
+    print("Grade: A")
+elif score >= 70:
+    print("Grade: B")
+elif score >= 60:
+    print("Grade: C")
+elif score >= 50:
+    print("Grade: D")
+elif score >= 40:
+    print("Grade: E")
+else:
+    print("YOU HAVE FAILED!!!")
