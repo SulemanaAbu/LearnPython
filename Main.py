@@ -1,12 +1,26 @@
-import time
+# Credit card Validator Program
+sum_odd_digits = 0
+sum_even_digits = 0
+total = 0
 
-myTime = int(input("Enter the time in secs: "))
+card_number = input("Enter credit card number #: ")
+card_number = card_number.replace("-", "")
+card_number = card_number.replace(" ", "")
+card_number = card_number[::-1]
 
-for x in range(myTime, -1, -1):
-    seconds = x % 60
-    minutes = int(x / 60) % 60
-    hours = int(x / 3600)
-    print(f"{hours:02}:{minutes:02}:{seconds:02}")
-    time.sleep(1)
+for x in card_number[::2]:
+    sum_odd_digits += int(x)
 
-print("TIME's UP!!!")
+for x in card_number[1::2]:
+    x = int(x) * 2
+    if x >= 10:
+        sum_even_digits += (x % 10) + 1
+    else:
+        sum_even_digits += x
+
+total = sum_odd_digits + sum_even_digits
+
+if total % 10 == 0:
+    print("VALID")
+else:
+    print("INVALID")
