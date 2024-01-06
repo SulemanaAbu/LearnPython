@@ -1,6 +1,6 @@
-age = int(input("Enter your age: "))
+num = int(input("Enter a number between 1-10: "))
 
-while age < 0:
-    print("Enter a valid age IDIOT!")
-    age = int(input("Enter your age: "))
-print(f"You are {age} years old")
+while num < 1 or num > 10:
+    print("Enter a valid number IDIOT!")
+    num = int(input("Enter a number between 1-10: "))
+print(f"Your number is {num}")
