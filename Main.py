@@ -1,15 +1,11 @@
-# If and else statements
-print("Temperature conversion program")
-print("_______________________________")
+# String methods
+username = input("Enter your username: ")
 
-temp = float(input("Enter the temperature: "))
-unit = input("Enter the unit of the temperature (C or F): ")
-
-if unit == "C":
-    temp = (temp * (9 / 5)) + 32
-    print(f"The temperature is {round(temp, 3)}^oF")
-elif unit == "F":
-    temp = (temp - 32) * (5 / 9)
-    print(f"The temperature is {round(temp, 3)}^oC")
+if len(username) > 12:
+    print("Username must be 12 characters or less")
+elif not username.find(" ") == -1:
+    print("Username cannot contain spaces")
+elif not username.isalpha():
+    print("Username cannot contain numbers")
 else:
-    print(f"{unit} is invalid!")
+    print(f"Welcome {username}!")
