@@ -1,11 +1,6 @@
-# String methods
-username = input("Enter your username: ")
+# format specifiers
+a = int(input("Enter the coefficient of x^2: "))
+b = int(input("Enter the coefficient of x: "))
+c = int(input("Enter the constant: "))
 
-if len(username) > 12:
-    print("Username must be 12 characters or less")
-elif not username.find(" ") == -1:
-    print("Username cannot contain spaces")
-elif not username.isalpha():
-    print("Username cannot contain numbers")
-else:
-    print(f"Welcome {username}!")
+print(f"The quadratic equation is {a: }x^2{b:+}x{c:+}")
