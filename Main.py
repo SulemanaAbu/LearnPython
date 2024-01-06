@@ -1,6 +1,9 @@
-num = int(input("Enter a number between 1-10: "))
+# for loops
+for x in range(1, 11, 2):
+    print(x)
 
-while num < 1 or num > 10:
-    print("Enter a valid number IDIOT!")
-    num = int(input("Enter a number between 1-10: "))
-print(f"Your number is {num}")
+for y in reversed(range(1, 11, 2)):
+    print(y)
+print("HAPPY NEW YEAR!")
+
+# Continue and break keywords can be used
