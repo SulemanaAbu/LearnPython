@@ -1,20 +1,15 @@
 # If and else statements
-print("Accepting scores from students and displaying grade obtained")
-print("____________________________________________________________")
+print("Temperature conversion program")
+print("_______________________________")
 
-score = int(input("Enter score obtained: "))
+temp = float(input("Enter the temperature: "))
+unit = input("Enter the unit of the temperature (C or F): ")
 
-if score > 100:
-    print("Enter a valid Score!")
-elif score >= 80:
-    print("Grade: A")
-elif score >= 70:
-    print("Grade: B")
-elif score >= 60:
-    print("Grade: C")
-elif score >= 50:
-    print("Grade: D")
-elif score >= 40:
-    print("Grade: E")
+if unit == "C":
+    temp = (temp * (9 / 5)) + 32
+    print(f"The temperature is {round(temp, 3)}^oF")
+elif unit == "F":
+    temp = (temp - 32) * (5 / 9)
+    print(f"The temperature is {round(temp, 3)}^oC")
 else:
-    print("YOU HAVE FAILED!!!")
+    print(f"{unit} is invalid!")
