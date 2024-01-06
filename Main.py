@@ -1,9 +1,10 @@
-# for loops
-for x in range(1, 11, 2):
-    print(x)
+# nested for loops
 
-for y in reversed(range(1, 11, 2)):
-    print(y)
-print("HAPPY NEW YEAR!")
+rows = int(input("Enter the number of rows: "))
+columns = int(input("Enter the number of columns: "))
+symbol = input("Enter the symbol: ")
 
-# Continue and break keywords can be used
+for y in range(rows):
+    for x in range(columns):
+        print(symbol, end="")
+    print()
