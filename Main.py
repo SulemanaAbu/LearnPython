@@ -1,10 +1,7 @@
-# Exercise
-import math
-print("------------------------------")
-print("Hypotenuse of a right triangle")
-print("-------------------------------")
-a = float(input("Enter side A: "))
-b = float(input("Enter side B: "))
+# If and else statements
+age = int(input("Enter you age: "))
+if age >= 18:
+    print("You are an adult")
+else:
+    print("You are a child")
 
-hyp = math.sqrt(pow(a, 2) + pow(b, 2))
-print(f"The hypotenuse is {round(hyp, 3)}")
