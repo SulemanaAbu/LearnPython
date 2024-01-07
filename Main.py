@@ -1,36 +1,56 @@
-# Random number
 import random
-options = ("ROCK", "PAPER", "SCISSORS")
-playing = True
-while playing:
-    player = None
-    computer = random.choice(options)
+# print("\u25CF \u250C \u2500 \u2510 \u2502 \u2514 \u2518")
+# ● ┌ ─ ┐ │ └ ┘
+diceArt = {1: ("┌─────────┐",
+               "│         │",
+               "│    ●    │",
+               "│         │",
+               "└─────────┘"),
+           2: ("┌─────────┐",
+               "│  ●      │",
+               "│         │",
+               "│      ●  │",
+               "└─────────┘"),
+           3: ("┌─────────┐",
+               "│  ●      │",
+               "│    ●    │",
+               "│      ●  │",
+               "└─────────┘"),
+           4: ("┌─────────┐",
+               "│  ●   ●  │",
+               "│         │",
+               "│  ●   ●  │",
+               "└─────────┘"),
+           5: ("┌─────────┐",
+               "│  ●   ●  │",
+               "│    ●    │",
+               "│  ●   ●  │",
+               "└─────────┘"),
+           6: ("┌─────────┐",
+               "│  ●   ●  │",
+               "│  ●   ●  │",
+               "│  ●   ●  │",
+               "└─────────┘"),
 
-    while player not in options:
-        player = input("Enter your choice (Rock, Paper or Scissors): ").upper()
+           }
+dice = []
+total = 0
+num_of_dice = int(input("How many dice?: "))
 
-    print(f"Player: {player}")
-    print(f"Computer: {computer}")
+for die in range(num_of_dice):
+    dice.append(random.randint(1, 6))
 
-    if player == computer:
-        print("IT's A TIE")
-    elif player == "ROCK" and computer == "SCISSORS":
-        print("YOU WIN!")
-    elif player == "ROCK" and computer == "PAPER":
-        print("YOU LOSE!")
-    elif player == "PAPER" and computer == "SCISSORS":
-        print("YOU LOSE!")
-    elif player == "PAPER" and computer == "ROCK":
-        print("YOU WIN!")
-    elif player == "SCISSORS" and computer == "ROCK":
-        print("YOU LOSE!")
-    else:
-        print("YOU WIN!")
-        break
-    if not input("Play again? (Y?N): ").lower() == "y":
-        playing = False
-    else:
-        playing = True
+# PRINT VERTICALLY
+# for die in range(num_of_dice):
+#    for line in dice_art.get(dice[die]):
+#        print(line)
 
-print("Thanks for playing!")
+# PRINT HORIZONTALLY
+for line in range(5):
+    for die in dice:
+        print(diceArt.get(die)[line], end="")
+    print()
 
+for die in dice:
+    total += die
+print(f"total: {total}")
