@@ -1,8 +1,8 @@
 # Object Oriented Programming
-from Car import Car
+from student import Student
 
-car_1 = Car("Chevrolet", "Camaro", 2020, "Blue")
-car_2 = Car("Ferrari", "Tate", 2022, "Yellow")
+student_1 = Student("Elvis", "1135543", "Agriculture", 2022)
+student_2 = Student("Tate", "52267188", "The real world", 2019)
 
-car_1.drive()
-car_2.stop()
+student_1.study()
+student_2.defer()
