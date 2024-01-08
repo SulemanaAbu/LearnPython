@@ -1,15 +1,8 @@
-# arbitrary
+# Object Oriented Programming
+from Car import Car
 
-def shipping_label(*args, **kwargs):
-    for arg in args:
-        print(arg, end=" ")
-    print()
+car_1 = Car("Chevrolet", "Camaro", 2020, "Blue")
+car_2 = Car("Ferrari", "Tate", 2022, "Yellow")
 
-    print(f"Street: {kwargs.get('street')}")
-    print(f"City: {kwargs.get('city')}, zip: {kwargs.get('zip')}")
-
-
-shipping_label("Mr.""Sulemana Abubakar",
-               street="Ako loop",
-               city="Accra",
-               zip=123)
+car_1.drive()
+car_2.stop()
