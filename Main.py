@@ -1,45 +1,29 @@
-from abc import abstractmethod
+# Super keyword
+
+class Rectangle:
+    def __init__(self, length, width):
+        self.length = length
+        self.width = width
 
 
-class Animal:
+class Square(Rectangle):
+    def __init__(self, length, width):
+        super().__init__(length, width)
 
-    @abstractmethod
-    def eat(self):
-        return "This animal is eating"
-
-    @abstractmethod
-    def move(self):
-        return "This animal is moving"
+    def area(self):
+        return self.length*self.width
 
 
-class Fish(Animal):
-    def eat(self):
-        return "This fish is eating"
+class Cube(Rectangle):
+    def __init__(self, length, width, height):
+        super().__init__(length, width)
+        self.height = height
 
-    def move(self):
-        return "This fish is moving"
-
-
-class Hawk(Animal):
-    def eat(self):
-        return "This hawk is eating"
-
-    def move(self):
-        return "This hawk is moving"
+    def volume(self):
+        return self.length*self.width*self.height
 
 
-class Rabbit(Animal):
-    def eat(self):
-        return "This rabbit is eating"
-
-    def move(self):
-        return "This rabbit is moving"
-
-
-fish = Fish()
-hawk = Hawk()
-rabbit = Rabbit()
-print(rabbit.eat())
-print(fish.move())
-print(hawk.eat())
-print(hawk.move())
+square = Square(3, 3)
+cube = Cube(3, 3, 3)
+print(square.area())
+print(cube.volume())
