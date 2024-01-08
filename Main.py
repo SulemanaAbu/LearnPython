@@ -1,12 +1,8 @@
-# Keyword arguments
+# keyword
 
-def hello(greeting, title, first, last):
-    print(f"{greeting} {title}{first} {last}")
-
-
-hello("Hello", last="Eben", title="Mr.", first="Batman")
+def get_phone(country, area, first, last):
+    return f"{country}-{area}-{first}-{last}"
 
 
-for x in range(1, 11):
-    print(x, end=" ")
-# the end there is a keyword
+phone_num = get_phone(country=233, area=245, first=549, last=6037)
+print(phone_num)
