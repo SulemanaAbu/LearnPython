@@ -1,16 +1,12 @@
 # Functions in python
-def create_fullname(first_name, last_name):
-    first_name = first_name.capitalize()
-    last_name = last_name.capitalize()
-    return first_name + " "+last_name
+def intro(full_name, age, residence, school):
+    full_name = full_name.capitalize()
+    print(f"Hello {full_name}")
+    print(f"You are {age} years old")
+    print(f"You reside at {residence}")
+    print(f"You attend {school}")
 
 
-full_name = create_fullname("salman", "isak")
-print(full_name)
-
-
-def add(x, y):
-    return x + y
-
-
-print(add(1, 4))
+intro("salman Isak", 20, "Madina", "University of Ghana")
+print()
+intro("Richmond Eng", 42, "Denver", "University of Hong Kong")
