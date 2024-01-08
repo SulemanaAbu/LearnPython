@@ -1,12 +1,15 @@
 # arbitrary
 
+def shipping_label(*args, **kwargs):
+    for arg in args:
+        print(arg, end=" ")
+    print()
 
-def print_address(**kwargs):
-    for key, value in kwargs.items():
-        print(f"{key}: {value}")
+    print(f"Street: {kwargs.get('street')}")
+    print(f"City: {kwargs.get('city')}, zip: {kwargs.get('zip')}")
 
 
-print_address(street="Ako loop",
-              city="Accra",
-              state="GA",
-              zip=233)
+shipping_label("Mr.""Sulemana Abubakar",
+               street="Ako loop",
+               city="Accra",
+               zip=123)
