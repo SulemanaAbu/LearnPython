@@ -1,9 +1,12 @@
 # arbitrary
 
 
-def display_name(*args):
-    for arg in args:
-        print(arg, end=" ")
+def print_address(**kwargs):
+    for key, value in kwargs.items():
+        print(f"{key}: {value}")
 
 
-display_name("Dr.""Bro", "Code")
+print_address(street="Ako loop",
+              city="Accra",
+              state="GA",
+              zip=233)
