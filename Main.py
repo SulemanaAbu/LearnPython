@@ -1,8 +1,12 @@
-# keyword
+# arbitrary
 
-def get_phone(country, area, first, last):
-    return f"{country}-{area}-{first}-{last}"
+def add(*nums):
+    total = 0
+    for num in nums:
+        total += num
+    return total
 
 
-phone_num = get_phone(country=233, area=245, first=549, last=6037)
-print(phone_num)
+print(add(1, 2, 7, 8, 9))
+
+
