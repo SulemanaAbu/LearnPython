@@ -1,8 +1,13 @@
-# Object Oriented Programming
-from student import Student
+from fish import Fish
+from hawk import Hawk
+from rabbit import Rabbit
 
-student_1 = Student("Elvis", "1135543", "Agriculture", 2022)
-student_2 = Student("Tate", "52267188", "The real world", 2019)
+fish = Fish()
+hawk = Hawk()
+rabbit = Rabbit()
 
-student_1.study()
-student_2.defer()
+
+print(rabbit.run())
+print(hawk.fly())
+print(fish.swim())
+print(fish.sleep())
