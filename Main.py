@@ -1,12 +1,9 @@
 # arbitrary
 
-def add(*nums):
-    total = 0
-    for num in nums:
-        total += num
-    return total
+
+def display_name(*args):
+    for arg in args:
+        print(arg, end=" ")
 
 
-print(add(1, 2, 7, 8, 9))
-
-
+display_name("Dr.""Bro", "Code")
