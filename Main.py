@@ -1,29 +1,48 @@
-# Super keyword
-
-class Rectangle:
-    def __init__(self, length, width):
-        self.length = length
-        self.width = width
+# functions
+from abc import abstractmethod
 
 
-class Square(Rectangle):
-    def __init__(self, length, width):
-        super().__init__(length, width)
-
-    def area(self):
-        return self.length*self.width
+class Animal:
+    alive = True
 
 
-class Cube(Rectangle):
-    def __init__(self, length, width, height):
-        super().__init__(length, width)
-        self.height = height
-
-    def volume(self):
-        return self.length*self.width*self.height
+@abstractmethod
+class Prey:
+    def flee(self):
+        return "This animal is fleeing"
 
 
-square = Square(3, 3)
-cube = Cube(3, 3, 3)
-print(square.area())
-print(cube.volume())
+@abstractmethod
+class Predator:
+    def hunt(self):
+        return "This animal is hunting"
+
+
+class Fish(Animal, Prey, Predator):
+    def flee(self):
+        return "This fish is fleeing from a bigger fish"
+
+    def hunt(self):
+        return "This fish is hunting bigger fish"
+
+
+class Hawk(Animal, Predator):
+    def hunt(self):
+        return "This hawk is hunting"
+
+
+class Rabbit(Animal, Prey):
+    def flee(self):
+        return "This rabbit is fleeing"
+
+
+animal = Animal()
+fish = Fish()
+rabbit = Rabbit()
+hawk = Hawk()
+
+print(animal.alive)
+print(fish.flee())
+print(fish.hunt())
+print(rabbit.flee())
+print(hawk.hunt())
